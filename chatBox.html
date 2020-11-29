@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <style>
+        .kotak{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+        }
+        .pojokKanan{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pojokKanan">
+            <div class="kotak" id="kotak"></div>
+            <input type="text" id="isipesan">
+            <input type="submit" value="kirim" id="kirim" onclick="kirimpesan()">
+        </div>
+    </div>
+
+    <script>
+        function kirimpesan(){
+            let isipesan = document.getElementById("isipesan").value;
+            document.getElementById("kotak").innerHTML += isipesan + "<br />";
+
+        }
+    </script>
+</body>
+</html>
